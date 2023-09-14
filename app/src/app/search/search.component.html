@@ -1,0 +1,24 @@
+<section id="wrapper">
+    <section>
+        <h2>Search For Contact</h2>
+        <input (input)="searchContacts()" type="text" [(ngModel)]="search" placeholder="Search by name or phone number">
+        <br><br>
+        <table id="List">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr *ngFor="let contact of searchResults">
+                    <td>{{contact.name}}</td>
+                    <td>{{contact.number}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 *ngIf="searchResults.length == 0">No Data Found</h4>
+        <br>
+        <button class="Btn"><a [routerLink]="['/']">Back</a></button>
+    </section>
+</section>

@@ -1,0 +1,29 @@
+#wrapper{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+h2{
+    font-size: 40+px;
+}
+#Form{
+    width: 40vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+#Form button{
+    width: fit-content;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+.Btn{
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+#btns{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+}

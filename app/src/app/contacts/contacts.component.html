@@ -1,0 +1,29 @@
+<section id="wrapper">
+    <section>
+        <h1>Contact List</h1>
+        <table id="List">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr *ngFor="let contact of contacts">
+                    <td>{{contact.name}}</td>
+                    <td>{{contact.number}}</td>
+                    <td><button style="color: red;" (click)="deleteContact(contact.id)">Delete Contact</button></td>
+                    <td><button><a style="color: yellow;" [routerLink]="['/editContact' , contact.id]">Edit</a></button></td>
+                </tr>
+            </tbody>
+        </table>
+        <h4 *ngIf="contacts.length == 0">No Data Found</h4>
+        <br>
+        <div id="btns">
+            <button class="Btn"><a [routerLink]="['/addContact']">Add Contact </a></button>
+            <button class="Btn"><a [routerLink]="['/search']">Search for Contact</a></button>
+        </div>
+    </section>
+</section>

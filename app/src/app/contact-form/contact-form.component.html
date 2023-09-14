@@ -1,0 +1,18 @@
+<section id="wrapper">
+    <section>
+        <h2>Contact Form</h2>
+        <form id="Form" (ngSubmit)="saveContactNew(newContacts.value)" [formGroup]="newContacts">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"  formControlName="name"  required>
+                <label for="number">Phone Number:</label>
+                <input type="text" id="number" name="number" formControlName="number" required>
+            <div>
+                <h5>{{message}}</h5>
+            </div>
+            <div id="btns">
+                <button type="submit">Save</button>
+                <button class="Btn"><a [routerLink]="['/']">Back</a></button>
+            </div>
+        </form>
+    </section>
+</section>
